@@ -2858,6 +2858,7 @@
   "keywords": [
     "aws",
     "cdk",
+    "devax",
     "lambda",
     "layer",
     "powertools",
@@ -3023,5 +3024,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "TD166zVq+WIA3KpDEdKSXZO6DHvuJjaJOeK+xX3hy7I="
+  "fingerprint": "bq4yg8UkSg65RJqVTCi4ThV6eBimI9wHvhURjX99NXY="
 }

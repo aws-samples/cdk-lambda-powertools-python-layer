@@ -28,13 +28,6 @@ jobs:
         uses: actions/setup-node@v2.2.0
         with:
           node-version: "14"
-      - name: check docker running
-        run: sudo chmod 666 /var/run/docker.sock && docker info
-      - name: Set up Docker Buildx
-        id: buildx
-        uses: docker/setup-buildx-action@v1.6.0
-        with:
-          install: true
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
       - name: release
