@@ -30,6 +30,8 @@ jobs:
           node-version: "14"
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
+      - name: set user permission for docker.sock
+        run: sudo chown $USER /var/run/docker.sock
       - name: release
         run: npx projen release
       - name: Check for new commits
