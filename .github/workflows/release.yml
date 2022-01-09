@@ -30,8 +30,8 @@ jobs:
           node-version: "14"
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
-      - name: check username
-        run: whoami
+      - name: give user docker permission so we can run tests
+        run: sudo usermod -aG docker $(whoami)
       - name: release
         run: npx projen release
       - name: Check for new commits
