@@ -5,6 +5,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'powertools', 'python', 'layer', 'lambda', 'devax'],
   cdkVersion: '2.2.0',
   defaultReleaseBranch: 'main',
+  majorVersion: '0',
   name: 'cdk-lambda-powertools-python-layer',
   repositoryUrl: 'https://github.com/amelnyk/cdk-lambda-powertools-python-layer.git',
   description: 'A lambda layer for AWS Powertools for python',
