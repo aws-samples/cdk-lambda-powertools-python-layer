@@ -1,7 +1,7 @@
 {
   "author": {
     "email": "amelnyk@amazon.de",
-    "name": "Alexander Melnyk (am29d)",
+    "name": "Alexander Melnyk",
     "roles": [
       "author"
     ]
@@ -2884,6 +2884,10 @@
   "targets": {
     "js": {
       "npm": "cdk-lambda-powertools-python-layer"
+    },
+    "python": {
+      "distName": "cdk-lambda-powertools-python-layer",
+      "module": "cdk_lambda_powertools_python_layer"
     }
   },
   "types": {
@@ -3024,5 +3028,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "bq4yg8UkSg65RJqVTCi4ThV6eBimI9wHvhURjX99NXY="
+  "fingerprint": "d0Vv2mqbhdMR/bcmrWttHIiURebjXsLVUdEv5TudkjE="
 }

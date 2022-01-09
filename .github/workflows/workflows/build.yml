@@ -29,6 +29,8 @@ jobs:
           node-version: "14"
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
+      - name: give user docker permission so we can run tests
+        run: sudo chown $(whoami) /var/run/docker.sock
       - name: build
         run: npx projen build
       - name: Check for changes

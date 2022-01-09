@@ -1,6 +1,6 @@
 const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
-  author: 'Alexander Melnyk (am29d)',
+  authorName: 'Alexander Melnyk',
   authorAddress: 'amelnyk@amazon.de',
   keywords: ['aws', 'cdk', 'powertools', 'python', 'layer', 'lambda', 'devax'],
   cdkVersion: '2.2.0',
@@ -8,7 +8,15 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: 'cdk-lambda-powertools-python-layer',
   repositoryUrl: 'https://github.com/amelnyk/cdk-lambda-powertools-python-layer.git',
   description: 'A lambda layer for AWS Powertools for python',
-  workflowNodeVersion: '14',
+  github: false,
+  publishToPypi: {
+    distName: 'cdk-lambda-powertools-python-layer',
+    module: 'cdk_lambda_powertools_python_layer',
+  },
+  catalog: {
+    twitter: 'am29d',
+    announce: false,
+  },
 });
 
 
