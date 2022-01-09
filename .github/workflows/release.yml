@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
       - name: give user docker permission so we can run tests
-        run: sudo usermod -aG docker $(whoami)
+        run: sudo chown $(whoami) /var/run/docker.sock
       - name: release
         run: npx projen release
       - name: Check for new commits
