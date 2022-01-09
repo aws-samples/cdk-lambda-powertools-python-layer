@@ -12,32 +12,6 @@ import { LambdaPowertoolsLayer } from 'cdk-lambda-powertools-python-layer';
 const powertoolsLayer = new LambdaPowertoolsLayer(this, 'TestLayer');
 ```
 
-## How to test
-
-This module is not published yet, therefore you need to install few tools to test it. 
-This section will be deleted after the construct is released to a public repository.
-
-### Requirements
-
-* cdk v2
-* docker
-* npm or yarn, whatever you prefer
-
-### Build construct
-
-After you have checked out the repo:
-
-```shell
-npm i
-npm run build
-```
-
-This will create a tgz file in `dist/js` directory. You can copy this file to your test project then install this module
-with
-
-```shell
-npm i file:PATH_TO_PACKAGE/cdk-lambda-powertools-python-layer@0.0.0.jsii.tgz
-```
 
 ## Install
 
