@@ -29,7 +29,6 @@
   },
   "author": {
     "name": "Alexander Melnyk",
-    "email": "amelnyk@amazon.de",
     "organization": false
   },
   "devDependencies": {
@@ -71,7 +70,7 @@
     "python"
   ],
   "main": "lib/index.js",
-  "license": "Apache-2.0",
+  "license": "UNLICENSED",
   "version": "0.0.0",
   "jest": {
     "testMatch": [

@@ -1,6 +1,5 @@
 {
   "author": {
-    "email": "amelnyk@amazon.de",
     "name": "Alexander Melnyk",
     "roles": [
       "author"
@@ -2864,7 +2863,7 @@
     "powertools",
     "python"
   ],
-  "license": "Apache-2.0",
+  "license": "UNLICENSED",
   "metadata": {
     "jsii": {
       "pacmak": {
@@ -3029,5 +3028,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "yi+OPgpzqxFOD5bLwt3fMMOHfi2Rs2/uE1SPJT3c56Y="
+  "fingerprint": "zNyvFPzpKpJfdN3pchQH9jtPLfp1ShtoECOjJjbbd48="
 }

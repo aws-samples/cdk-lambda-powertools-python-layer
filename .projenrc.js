@@ -1,7 +1,6 @@
 const { awscdk } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Alexander Melnyk',
-  authorAddress: 'amelnyk@amazon.de',
   keywords: ['aws', 'cdk', 'powertools', 'python', 'layer', 'lambda', 'devax'],
   cdkVersion: '2.2.0',
   defaultReleaseBranch: 'main',
@@ -18,6 +17,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     twitter: 'am29d',
     announce: false,
   },
+  licensed: false,
 });
 
 
