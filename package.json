@@ -39,10 +39,10 @@
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.2.0",
     "constructs": "10.0.5",
+    "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
-    "eslint": "^8",
     "jest": "^27.4.7",
     "jest-junit": "^13",
     "jsii": "^1.52.0",
@@ -60,7 +60,6 @@
     "aws-cdk-lib": "^2.2.0",
     "constructs": "^10.0.5"
   },
-  "dependencies": {},
   "bundledDependencies": [],
   "keywords": [
     "aws",
