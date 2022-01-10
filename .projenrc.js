@@ -1,4 +1,7 @@
-const { awscdk } = require('projen');
+const {
+  awscdk,
+  License,
+} = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Alexander Melnyk',
   authorOrganization: true,
@@ -18,7 +21,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
     twitter: 'am29d',
     announce: false,
   },
-  license: 'MIT-0',
+});
+
+new License(project, {
+  spdx: 'MIT-0',
+  copyrightOwner: 'Amazon.com, Inc. or its affiliates. All Rights Reserved.',
 });
 
 
