@@ -15,6 +15,9 @@
     "docgen": "npx projen docgen",
     "eslint": "npx projen eslint",
     "package": "npx projen package",
+    "package-all": "npx projen package-all",
+    "package:js": "npx projen package:js",
+    "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
@@ -33,7 +36,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "@types/node": "^14.17.0",
+    "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.2.0",
@@ -47,7 +50,6 @@
     "jsii": "^1.52.0",
     "jsii-diff": "^1.52.0",
     "jsii-docgen": "^4.2.34",
-    "jsii-pacmak": "^1.52.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "projen": "^0.50.17",
@@ -59,7 +61,6 @@
     "aws-cdk-lib": "^2.2.0",
     "constructs": "^10.0.5"
   },
-  "bundledDependencies": [],
   "keywords": [
     "aws",
     "cdk",
@@ -74,8 +75,8 @@
   "version": "0.0.0",
   "jest": {
     "testMatch": [
-      "**/__tests__/**/*.ts?(x)",
-      "**/?(*.)+(spec|test).ts?(x)"
+      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/(test|src)/**/?(*.)+(spec|test).ts?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,

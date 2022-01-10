@@ -17,16 +17,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'cdk-lambda-powertools-python-layer',
     module: 'cdk_lambda_powertools_python_layer',
   },
+  license: 'MIT-0',
+  copyrightOwner: 'Amazon.com, Inc. or its affiliates. All Rights Reserved.',
   catalog: {
     twitter: 'am29d',
     announce: false,
   },
 });
-
-new License(project, {
-  spdx: 'MIT-0',
-  copyrightOwner: 'Amazon.com, Inc. or its affiliates. All Rights Reserved.',
-});
-
 
 project.synth();
