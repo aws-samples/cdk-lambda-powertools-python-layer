@@ -3,7 +3,7 @@
   "description": "A lambda layer for AWS Powertools for python",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amelnyk/cdk-lambda-powertools-python-layer.git"
+    "url": "https://github.com/aws-samples/cdk-lambda-powertools-python-layer.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -29,7 +29,7 @@
   },
   "author": {
     "name": "Alexander Melnyk",
-    "organization": false
+    "organization": true
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
@@ -70,7 +70,7 @@
     "python"
   ],
   "main": "lib/index.js",
-  "license": "UNLICENSED",
+  "license": "MIT-0",
   "version": "0.0.0",
   "jest": {
     "testMatch": [

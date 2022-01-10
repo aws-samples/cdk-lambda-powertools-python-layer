@@ -1,6 +1,7 @@
 {
   "author": {
     "name": "Alexander Melnyk",
+    "organization": true,
     "roles": [
       "author"
     ]
@@ -2852,7 +2853,7 @@
   "docs": {
     "stability": "stable"
   },
-  "homepage": "https://github.com/amelnyk/cdk-lambda-powertools-python-layer.git",
+  "homepage": "https://github.com/aws-samples/cdk-lambda-powertools-python-layer.git",
   "jsiiVersion": "1.52.0 (build d7c9e27)",
   "keywords": [
     "aws",
@@ -2863,7 +2864,7 @@
     "powertools",
     "python"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT-0",
   "metadata": {
     "jsii": {
       "pacmak": {
@@ -2878,7 +2879,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amelnyk/cdk-lambda-powertools-python-layer.git"
+    "url": "https://github.com/aws-samples/cdk-lambda-powertools-python-layer.git"
   },
   "schema": "jsii/0.10.0",
   "targets": {
@@ -3028,5 +3029,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "zNyvFPzpKpJfdN3pchQH9jtPLfp1ShtoECOjJjbbd48="
+  "fingerprint": "VoqUPrCE/YO2FNoQnLRG4LdS46Yr6AdWsfER5uJ8Aw4="
 }
