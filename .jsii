@@ -1,10 +1,11 @@
 {
   "author": {
-    "name": "Alexander Melnyk",
+    "name": "Amazon Web Services",
     "organization": true,
     "roles": [
       "author"
-    ]
+    ],
+    "url": "https://aws.amazon.com"
   },
   "dependencies": {
     "aws-cdk-lib": "^2.2.0",
@@ -3029,5 +3030,5 @@
     }
   },
   "version": "0.0.0",
-  "fingerprint": "VoqUPrCE/YO2FNoQnLRG4LdS46Yr6AdWsfER5uJ8Aw4="
+  "fingerprint": "yFlkV9m+It5+oX/u3YUnA2qIcLuvdXeZRhopSTMGzxM="
 }
