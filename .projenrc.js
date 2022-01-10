@@ -1,4 +1,7 @@
-const { awscdk } = require('projen');
+const {
+  awscdk,
+  License,
+} = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Alexander Melnyk',
   authorOrganization: true,
@@ -14,12 +17,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'cdk-lambda-powertools-python-layer',
     module: 'cdk_lambda_powertools_python_layer',
   },
+  license: 'MIT-0',
+  copyrightOwner: 'Amazon.com, Inc. or its affiliates. All Rights Reserved.',
   catalog: {
     twitter: 'am29d',
     announce: false,
   },
-  license: 'MIT-0',
 });
-
 
 project.synth();
