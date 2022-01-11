@@ -2855,7 +2855,7 @@
     "stability": "stable"
   },
   "homepage": "https://github.com/aws-samples/cdk-lambda-powertools-python-layer.git",
-  "jsiiVersion": "1.52.0 (build d7c9e27)",
+  "jsiiVersion": "1.52.1 (build 5ccc8f6)",
   "keywords": [
     "aws",
     "cdk",
@@ -3029,6 +3029,6 @@
       "symbolId": "src/lambda-powertools-layer:PowertoolsLayerProps"
     }
   },
-  "version": "2.0.0",
-  "fingerprint": "I88IGvj2OjqZ4sgV3UFw4/17ksFGM20fkZIxpO5cbXg="
+  "version": "0.0.0",
+  "fingerprint": "ZOXqlBA8ovzkzVpQUPgfqo7z7wPVh6CZrwedIJhp3F8="
 }
