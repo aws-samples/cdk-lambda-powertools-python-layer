@@ -1,10 +1,13 @@
 # Lambda powertools python layer
 
 ## Why this project exists
-This is a custom construct that will create AWS Lambda Layer with AWS Powertools for Python library. 
-There are different ways how to create a layer and when working with CDK you need to install the library, create a zip file and wire it correctly.
-With this construct you don't have to care about packaging and dependency management, just create a construct and add it to your function.
-The construct is an extension of the existing [`LayerVersion`](https://docs.aws.amazon.com/cdk/api/v1/docs/@aws-cdk_aws-lambda.LayerVersion.html) construct from the CDK library, so you have access to all fields and methods.
+
+This is a custom construct that will create AWS Lambda Layer with AWS Powertools for Python library. There are different
+ways how to create a layer and when working with CDK you need to install the library, create a zip file and wire it
+correctly. With this construct you don't have to care about packaging and dependency management, just create a construct
+and add it to your function. The construct is an extension of the
+existing [`LayerVersion`](https://docs.aws.amazon.com/cdk/api/v1/docs/@aws-cdk_aws-lambda.LayerVersion.html) construct
+from the CDK library, so you have access to all fields and methods.
 
 ```typescript
 import { LambdaPowertoolsLayer } from 'cdk-lambda-powertools-python-layer';
@@ -12,6 +15,13 @@ import { LambdaPowertoolsLayer } from 'cdk-lambda-powertools-python-layer';
 const powertoolsLayer = new LambdaPowertoolsLayer(this, 'TestLayer');
 ```
 
+Python
+
+```python
+from cdk_lambda_powertools_python_layer import LambdaPowertoolsLayer
+
+powertoolsLayer = LambdaPowertoolsLayer(self, 'PowertoolsLayer')
+```
 
 ## Install
 
@@ -29,7 +39,71 @@ pip install cdk-lambda-powertools-python-layer
 
 ## Usage
 
+### Python
+
 A single line will create a layer with powertools for python:
+
+```python
+from cdk_lambda_powertools_python_layer import LambdaPowertoolsLayer
+
+powertoolsLayer = LambdaPowertoolsLayer(self, 'PowertoolsLayer')
+```
+
+You can then add the layer to your funciton:
+
+```python
+aws_lambda.Function(self, 'LambdaFunction',
+                            code=aws_lambda.Code.from_asset('function'),
+                            handler='app.handler',
+                            runtime=aws_lambda.Runtime.PYTHON_3_9,
+                            layers=[powertoolsLayer])
+```
+
+You can specify the powertools version by passing the optional `version` paramter, otherwise the construct will take the
+latest version from pypi repository.
+
+```python
+LambdaPowertoolsLayer(self, 'PowertoolsLayer', version='1.24.0')
+```
+
+Additionally, powertools have extras depenedncies such as
+Pydantic, [documented here](https://awslabs.github.io/aws-lambda-powertools-python/latest/#lambda-layer). This is not
+included by default, and you have to set this option in the construct definition if you need it:
+
+```python
+LambdaPowertoolsLayer(self, 'PowertoolsLayer', include_extras=True)
+```
+
+Full example:
+
+```python
+from aws_cdk import Stack, aws_lambda
+from cdk_lambda_powertools_python_layer import LambdaPowertoolsLayer
+from constructs import Construct
+from typing_extensions import runtime
+
+
+class LayerTestStack(Stack):
+
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+        
+        powertoolsLayer = LambdaPowertoolsLayer(
+            self, 'PowertoolsLayer', include_extras=True, version='1.24.0')
+
+        aws_lambda.Function(self, 'LambdaFunction',
+                            code=aws_lambda.Code.from_asset('function'),
+                            handler='app.handler',
+                            runtime=aws_lambda.Runtime.PYTHON_3_9,
+                            layers=[powertoolsLayer])
+
+```
+
+### TypeScript 
+
+These examples are for TypeScript: 
+
+Build the layer: 
 
 ```typescript
 import { LambdaPowertoolsLayer } from 'cdk-lambda-powertools-python-layer';
@@ -39,7 +113,7 @@ const powertoolsLayer = new LambdaPowertoolsLayer(this, 'TestLayer', {
 });
 ```
 
-You can then add the layer to your funciton:
+Add to your function:
 
 ```typescript
 new Function(this, 'LambdaFunction', {
@@ -50,8 +124,7 @@ new Function(this, 'LambdaFunction', {
 });
 ```
 
-You can specify the powertools version by passing the optional `version` paramter, otherwise the construct will take the latest
-version from pypi repository.
+You can specify the powertools version:
 
 ```typescript
 new LambdaPowertoolsLayer(this, 'PowertoolsLayer', {
@@ -59,8 +132,7 @@ new LambdaPowertoolsLayer(this, 'PowertoolsLayer', {
 });
 ```
 
-Additionally, powertools have extras depenedncies such as Pydantic, [documented here](https://awslabs.github.io/aws-lambda-powertools-python/latest/#lambda-layer). 
-This is not included by default, and you have to set this option in the construct definition if you need it:
+Decide if you want to incldue pydantic as extras dependencies:
 
 ```typescript
 new LambdaPowertoolsLayer(this, 'PowertoolsLayer', {
@@ -96,3 +168,4 @@ export class CdkPowertoolsExampleStack extends Stack {
 }
 
 ```
+
