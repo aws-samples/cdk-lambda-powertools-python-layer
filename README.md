@@ -9,6 +9,8 @@ and add it to your function. The construct is an extension of the
 existing [`LayerVersion`](https://docs.aws.amazon.com/cdk/api/v1/docs/@aws-cdk_aws-lambda.LayerVersion.html) construct
 from the CDK library, so you have access to all fields and methods.
 
+See the [API](API.md) for details.
+
 ```typescript
 import { LambdaPowertoolsLayer } from 'cdk-lambda-powertools-python-layer';
 
@@ -22,6 +24,8 @@ from cdk_lambda_powertools_python_layer import LambdaPowertoolsLayer
 
 powertoolsLayer = LambdaPowertoolsLayer(self, 'PowertoolsLayer')
 ```
+
+The layer will be created during the CDK `synth` step and thus requires Docker.
 
 ## Install
 
@@ -52,6 +56,8 @@ powertoolsLayer = LambdaPowertoolsLayer(self, 'PowertoolsLayer')
 You can then add the layer to your funciton:
 
 ```python
+from aws_cdk import aws_lambda
+
 aws_lambda.Function(self, 'LambdaFunction',
                             code=aws_lambda.Code.from_asset('function'),
                             handler='app.handler',
@@ -80,7 +86,6 @@ Full example:
 from aws_cdk import Stack, aws_lambda
 from cdk_lambda_powertools_python_layer import LambdaPowertoolsLayer
 from constructs import Construct
-from typing_extensions import runtime
 
 
 class LayerTestStack(Stack):
@@ -101,46 +106,7 @@ class LayerTestStack(Stack):
 
 ### TypeScript 
 
-These examples are for TypeScript: 
-
-Build the layer: 
-
-```typescript
-import { LambdaPowertoolsLayer } from 'cdk-lambda-powertools-python-layer';
-
-const powertoolsLayer = new LambdaPowertoolsLayer(this, 'TestLayer', {
-  version: '1.22.0',
-});
-```
-
-Add to your function:
-
-```typescript
-new Function(this, 'LambdaFunction', {
-  code: Code.fromAsset(path.join('./function')),
-  handler: 'app.handler',
-  runtime: Runtime.PYTHON_3_9,
-  layers: [powertoolsLayer],
-});
-```
-
-You can specify the powertools version:
-
-```typescript
-new LambdaPowertoolsLayer(this, 'PowertoolsLayer', {
-  version: '1.21.0'
-});
-```
-
-Decide if you want to incldue pydantic as extras dependencies:
-
-```typescript
-new LambdaPowertoolsLayer(this, 'PowertoolsLayer', {
-  includeExtras: true
-});
-```
-
-Full example:
+Full example for TypeScript:
 
 ```typescript
 import { Stack, StackProps } from 'aws-cdk-lib';
