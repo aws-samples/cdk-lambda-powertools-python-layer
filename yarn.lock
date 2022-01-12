@@ -528,7 +528,7 @@
     chalk "^4.1.2"
     semver "^7.3.5"
 
-"@jsii/spec@1.52.1", "@jsii/spec@^1.52.0", "@jsii/spec@^1.52.1":
+"@jsii/spec@1.52.1", "@jsii/spec@^1.52.1":
   version "1.52.1"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.52.1.tgz#2e44a019e3b5722a96883c42d726b748956c223e"
   integrity sha512-Mt5yzqR/DYZhxjOBTuQsstYh0gdlwSWvjTAfUGf5Rp76j8gddkADlrMRFeVrXBy/Y+ccJLUYWMSsEf1Ti6ERcQ==
@@ -787,9 +787,9 @@
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
 "@types/prettier@^2.1.5":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.2.tgz#4c62fae93eb479660c3bd93f9d24d561597a8281"
-  integrity sha512-ekoj4qOQYp7CvjX8ZDBgN86w3MqQhLE1hczEJbEIjgFEumDy+na/4AJAbLXfgEWFNB2pKadM5rPFtuSGMWK7xA==
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.3.tgz#a3c65525b91fca7da00ab1a3ac2b5a2a4afbffbf"
+  integrity sha512-QzSuZMBuG5u8HqYz01qtMdg/Jfctlnvj1z/lYnIDXs/golxw0fxtRAHd9KrzjR7Yxz1qVeI00o0kiO3PmVdJ9w==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -1324,9 +1324,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001298"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001298.tgz#0e690039f62e91c3ea581673d716890512e7ec52"
-  integrity sha512-AcKqikjMLlvghZL/vfTHorlQsLDhGRalYf1+GmWCf5SCMziSGjRYQW/JEksj14NaYHIR6KIhrFAy0HV5C25UzQ==
+  version "1.0.30001299"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001299.tgz#d753bf6444ed401eb503cbbe17aa3e1451b5a68c"
+  integrity sha512-iujN4+x7QzqA2NCSrS5VUy+4gLmRd4xv6vbBBsmfVqTx8bLAD8097euLqQgKxSVLvxjSDcvF1T/i9ocgnUFexw==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -1961,9 +1961,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.17:
-  version "1.4.40"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.40.tgz#f5dbced7bfbc7072e5e7ca5487f8f9a42c8bc768"
-  integrity sha512-j+eVIyQGt2EU5xPWUblhpp5P5z5xyAdRgzogBgfe2F5JGV17gr9pfzWBua6DlPL00LavbOjxubWkWkbVQe9Wlw==
+  version "1.4.43"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.43.tgz#665c0cd8d5e7cce0ba78d90a514c8c813ca3bdbe"
+  integrity sha512-PO3kEfcxPrti/4STbXvCkNIF4fgWvCKl2508e6UI7KomCDffpIfeBZLXsh5DK/XGsjUw3kwq6WEsi0MJTlGAdg==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3705,22 +3705,22 @@ jsii-diff@^1.52.1:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^4.2.35:
-  version "4.2.35"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.35.tgz#7b75bc8b94c85682b84f30b86f56bfb054249013"
-  integrity sha512-JHjta8yk30FX98MwJflfIKwMgZ4Pymt8KQ22fJyyDBBmTaBF8e0Vyy0UK6knwxQdTBcGrvYZStphW9bdzH3coQ==
+jsii-docgen@^4.2.37:
+  version "4.2.37"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.37.tgz#b22246a57163bc3d28d5c1d49302e53f4347cd32"
+  integrity sha512-67kfUe1ayJ9rMuPx124Mhi5vgShwbayGAnIF3ayXLb97KL09RhmhqSJr6ux5I1OthNnZ02QqWqvQx6hEDdX0Cw==
   dependencies:
-    "@jsii/spec" "^1.52.0"
+    "@jsii/spec" "^1.52.1"
     case "^1.6.3"
     fs-extra "^10.0.0"
     glob "^7.2.0"
     glob-promise "^3.4.0"
-    jsii-reflect "^1.52.0"
-    jsii-rosetta "^1.52.0"
+    jsii-reflect "^1.52.1"
+    jsii-rosetta "^1.52.1"
     semver "^7.3.5"
     yargs "^16.2.0"
 
-jsii-reflect@^1.52.0, jsii-reflect@^1.52.1:
+jsii-reflect@^1.52.1:
   version "1.52.1"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.52.1.tgz#b634f374961e72259dd79f198aa7e6ec45a3bbb2"
   integrity sha512-OsTquiUJkgUu5jlK2VeshLFP9mBd1NU7vhHvcJZ+0xc/u2byfzPT0Irj2o6XLp30Vx/+uGGK6Nf6KyKtmUe82w==
@@ -3732,7 +3732,7 @@ jsii-reflect@^1.52.0, jsii-reflect@^1.52.1:
     oo-ascii-tree "^1.52.1"
     yargs "^16.2.0"
 
-jsii-rosetta@^1.52.0:
+jsii-rosetta@^1.52.1:
   version "1.52.1"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.52.1.tgz#1a47b77796630b4a417cf1e9f51a5a2cba460b67"
   integrity sha512-iFpupZWQusVYGHaUPooaO6xVAtRp+o1EOMBS2FcJBZcWGbB8fRG3zzpeMSkoqu/Pjqtu7boh45V90CXtSmVfMQ==
