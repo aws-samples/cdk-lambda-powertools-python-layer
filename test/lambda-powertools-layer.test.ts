@@ -34,7 +34,7 @@ describe('with no configuration the construct', () => {
 describe('for layerVersionName configuraiton the construct', () => {
   test('synthisizes to a layer with provided name', () => {
     const stack = new Stack();
-    const layerToTest = new LambdaPowertoolsLayer(stack, 'PowertoolsLayer', {
+    new LambdaPowertoolsLayer(stack, 'PowertoolsLayer', {
       layerVersionName: 'mySpecialName',
     });
 
