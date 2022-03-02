@@ -16,4 +16,4 @@ WORKDIR /tmp
 
 RUN yum update -y && yum install -y zip unzip wget tar gzip
 
-RUN pip install -t /assets/python aws-lambda-powertools$PACKAGE_SUFFIX
+RUN pip install -t /asset/python aws-lambda-powertools$PACKAGE_SUFFIX
