@@ -2,6 +2,7 @@ import { Stack } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import { LambdaPowertoolsLayer } from '../lib';
 
+
 describe('with no configuration the construct', () => {
   const stack = new Stack();
   new LambdaPowertoolsLayer(stack, 'PowertoolsLayer');
@@ -26,6 +27,19 @@ describe('with no configuration the construct', () => {
         'python3.8',
         'python3.9',
       ],
+    });
+  });
+});
+
+describe('for layerVersionName configuraiton the construct', () => {
+  test('synthisizes to a layer with provided name', () => {
+    const stack = new Stack();
+    new LambdaPowertoolsLayer(stack, 'PowertoolsLayer', {
+      layerVersionName: 'mySpecialName',
+    });
+
+    Template.fromStack(stack).hasResourceProperties('AWS::Lambda::LayerVersion', {
+      LayerName: 'mySpecialName',
     });
   });
 });

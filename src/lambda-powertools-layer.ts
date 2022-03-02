@@ -15,6 +15,11 @@ export interface PowertoolsLayerProps {
    * This will increase the size of the layer significantly. If you don't use parsing, ignore it.
    */
   readonly includeExtras?: boolean;
+
+  /**
+   * the name of the layer, will be randomised if empty
+   */
+  readonly layerVersionName?: string;
 }
 
 /**
@@ -50,6 +55,7 @@ export class LambdaPowertoolsLayer extends lambda.LayerVersion {
           PACKAGE_SUFFIX: LambdaPowertoolsLayer.constructBuildArgs(props?.includeExtras, props?.version),
         },
       }),
+      layerVersionName: props?.layerVersionName ? props?.layerVersionName : undefined,
       license: 'MIT-0',
       compatibleRuntimes: [
         lambda.Runtime.PYTHON_3_6,

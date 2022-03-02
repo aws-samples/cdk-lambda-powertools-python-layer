@@ -90,6 +90,7 @@ const powertoolsLayerProps: PowertoolsLayerProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`includeExtras`](#cdklambdapowertoolspythonlayerpowertoolslayerpropspropertyincludeextras) | `boolean` | A flag for the pydantic extras dependency, used for parsing. |
+| [`layerVersionName`](#cdklambdapowertoolspythonlayerpowertoolslayerpropspropertylayerversionname) | `string` | the name of the layer, will be randomised if empty. |
 | [`version`](#cdklambdapowertoolspythonlayerpowertoolslayerpropspropertyversion) | `string` | The powertools package version from pypi repository. |
 
 ---
@@ -105,6 +106,18 @@ public readonly includeExtras: boolean;
 A flag for the pydantic extras dependency, used for parsing.
 
 This will increase the size of the layer significantly. If you don't use parsing, ignore it.
+
+---
+
+##### `layerVersionName`<sup>Optional</sup> <a name="cdk-lambda-powertools-python-layer.PowertoolsLayerProps.property.layerVersionName" id="cdklambdapowertoolspythonlayerpowertoolslayerpropspropertylayerversionname"></a>
+
+```typescript
+public readonly layerVersionName: string;
+```
+
+- *Type:* `string`
+
+the name of the layer, will be randomised if empty.
 
 ---
 
