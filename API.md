@@ -54,8 +54,14 @@ new LambdaPowertoolsLayer(scope: Construct, id: string, props?: PowertoolsLayerP
 ```typescript
 import { LambdaPowertoolsLayer } from 'cdk-lambda-powertools-python-layer'
 
-LambdaPowertoolsLayer.constructBuildArgs(includeExtras?: boolean, version?: string)
+LambdaPowertoolsLayer.constructBuildArgs(runtimeFamily: RuntimeFamily, includeExtras?: boolean, version?: string)
 ```
+
+###### `runtimeFamily`<sup>Required</sup> <a name="cdk-lambda-powertools-python-layer.LambdaPowertoolsLayer.parameter.runtimeFamily" id="cdklambdapowertoolspythonlayerlambdapowertoolslayerparameterruntimefamily"></a>
+
+- *Type:* [`aws-cdk-lib.aws_lambda.RuntimeFamily`](#aws-cdk-lib.aws_lambda.RuntimeFamily)
+
+---
 
 ###### `includeExtras`<sup>Optional</sup> <a name="cdk-lambda-powertools-python-layer.LambdaPowertoolsLayer.parameter.includeExtras" id="cdklambdapowertoolspythonlayerlambdapowertoolslayerparameterincludeextras"></a>
 
@@ -91,6 +97,7 @@ const powertoolsLayerProps: PowertoolsLayerProps = { ... }
 | --- | --- | --- |
 | [`includeExtras`](#cdklambdapowertoolspythonlayerpowertoolslayerpropspropertyincludeextras) | `boolean` | A flag for the pydantic extras dependency, used for parsing. |
 | [`layerVersionName`](#cdklambdapowertoolspythonlayerpowertoolslayerpropspropertylayerversionname) | `string` | the name of the layer, will be randomised if empty. |
+| [`runtimeFamily`](#cdklambdapowertoolspythonlayerpowertoolslayerpropspropertyruntimefamily) | [`aws-cdk-lib.aws_lambda.RuntimeFamily`](#aws-cdk-lib.aws_lambda.RuntimeFamily) | the runtime of the layer. |
 | [`version`](#cdklambdapowertoolspythonlayerpowertoolslayerpropspropertyversion) | `string` | The powertools package version from pypi repository. |
 
 ---
@@ -118,6 +125,18 @@ public readonly layerVersionName: string;
 - *Type:* `string`
 
 the name of the layer, will be randomised if empty.
+
+---
+
+##### `runtimeFamily`<sup>Optional</sup> <a name="cdk-lambda-powertools-python-layer.PowertoolsLayerProps.property.runtimeFamily" id="cdklambdapowertoolspythonlayerpowertoolslayerpropspropertyruntimefamily"></a>
+
+```typescript
+public readonly runtimeFamily: RuntimeFamily;
+```
+
+- *Type:* [`aws-cdk-lib.aws_lambda.RuntimeFamily`](#aws-cdk-lib.aws_lambda.RuntimeFamily)
+
+the runtime of the layer.
 
 ---
 
