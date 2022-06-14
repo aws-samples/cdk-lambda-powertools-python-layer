@@ -13,13 +13,13 @@ const project = new awscdk.AwsCdkConstructLibrary({
   devDeps: [
     '@types/prettier@2.6.0', // pin until breaking changes is resolved: https://github.com/DefinitelyTyped/DefinitelyTyped/discussions/60310
   ],
-  depsUpgradeOptions: {
-    ignoreProjen: false,
-    workflowOptions: {
-      labels: ['auto-approve', 'auto-merge'],
-      secret: 'PROJEN_GITHUB_TOKEN',
-    },
-  },
+  // depsUpgradeOptions: {
+  //   ignoreProjen: false,
+  //   workflowOptions: {
+  //     labels: ['auto-approve', 'auto-merge'],
+  //     secret: 'PROJEN_GITHUB_TOKEN',
+  //   },
+  // },
   github: false,
   publishToPypi: {
     distName: 'cdk-lambda-powertools-python-layer',
