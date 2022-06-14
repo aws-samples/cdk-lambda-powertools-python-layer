@@ -17,7 +17,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      secret: 'AUTOMATION_TOKEN',
+      secret: 'PROJEN_GITHUB_TOKEN',
     },
   },
   github: false,
@@ -26,7 +26,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     module: 'cdk_lambda_powertools_python_layer',
   },
   autoApproveOptions: {
-    secret: 'PROJEN_GITHUB_TOKEN',
+    secret: 'AUTOMATION_TOKEN',
     allowedUsernames: ['am29d'],
   },
   license: 'MIT-0',
