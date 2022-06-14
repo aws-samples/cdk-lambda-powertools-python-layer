@@ -60,7 +60,7 @@ describe('with version configuration the construct', () => {
   test('fails with invalid version', () => {
     const stack = new Stack();
     expect(() => new LambdaPowertoolsLayer(stack, 'PowertoolsLayerBadVersion', {
-      version: '12.222.21123',
+      version: '0.0.0',
     })).toThrow(/docker exited with status 1/);
   });
 
