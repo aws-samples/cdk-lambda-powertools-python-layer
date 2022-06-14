@@ -21,14 +21,15 @@ const project = new awscdk.AwsCdkConstructLibrary({
   //   },
   // },
   github: false,
+  mergify: true,
   publishToPypi: {
     distName: 'cdk-lambda-powertools-python-layer',
     module: 'cdk_lambda_powertools_python_layer',
   },
-  autoApproveOptions: {
-    secret: 'AUTOMATION_TOKEN',
-    allowedUsernames: ['am29d'],
-  },
+  // autoApproveOptions: {
+  //   secret: 'AUTOMATION_TOKEN',
+  //   allowedUsernames: ['am29d'],
+  // },
   license: 'MIT-0',
   copyrightOwner: 'Amazon.com, Inc. or its affiliates. All Rights Reserved.',
 });
