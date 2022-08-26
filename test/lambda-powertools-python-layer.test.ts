@@ -1,6 +1,7 @@
 import { Stack } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import { LambdaPowertoolsLayer } from '../lib';
+import { RuntimeFamily } from 'aws-cdk-lib/aws-lambda';
+import { LambdaPowertoolsLayer } from '../src';
 
 
 describe('with no configuration the construct', () => {
@@ -91,25 +92,25 @@ describe('with version configuration the construct', () => {
 
 describe('construct build args for Dockerfile', () => {
   test('returns pydantic and version', () => {
-    const args = LambdaPowertoolsLayer.constructBuildArgs(true, '1.21.0');
+    const args = LambdaPowertoolsLayer.constructBuildArgs(RuntimeFamily.PYTHON, true, '1.21.0');
 
     expect(args).toEqual('[pydantic]==1.21.0');
   });
 
   test('returns only pydantic when no version provided', () => {
-    const args = LambdaPowertoolsLayer.constructBuildArgs(true, undefined);
+    const args = LambdaPowertoolsLayer.constructBuildArgs(RuntimeFamily.PYTHON, true, undefined);
 
     expect(args).toEqual('[pydantic]');
   });
 
   test('returns only version when no extras flag provided', () => {
-    const args = LambdaPowertoolsLayer.constructBuildArgs(undefined, '1.11.0');
+    const args = LambdaPowertoolsLayer.constructBuildArgs(RuntimeFamily.PYTHON, undefined, '1.11.0');
 
     expect(args).toEqual('==1.11.0');
   });
 
   test('returns empty when no version and extras provided', () => {
-    const args = LambdaPowertoolsLayer.constructBuildArgs(undefined, undefined);
+    const args = LambdaPowertoolsLayer.constructBuildArgs(RuntimeFamily.PYTHON, undefined, undefined);
 
     expect(args).toEqual('');
   });
