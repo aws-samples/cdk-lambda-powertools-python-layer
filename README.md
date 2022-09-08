@@ -1,5 +1,8 @@
 # Lambda powertools python layer
 
+## ⚠️ This repository is archived: use the new repository to submit issues and follow updates: https://github.com/awslabs/cdk-aws-lambda-powertools-layer
+
+
 ## Why this project exists
 
 This is a custom construct that will create AWS Lambda Layer with AWS Powertools for Python library. There are different
